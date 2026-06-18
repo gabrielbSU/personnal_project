@@ -2,7 +2,7 @@
 
 ## Idées en vrac
 
-L'objectif de ce projet est de créer modèle de classification d'actions en 3 classes : achetée, vendre, garder.
+L'objectif de ce projet est de créer un modèle de classification d'actions en 3 classes : achetée, vendre, garder.
 Mon idée est d'entrainer un modèle de regression logistique sur des données boursières historiques puis je me focalise sur certaines actions dont je récupère les features à l'instant présent pour voir ce que mon classifieur ferait.
 
 ## à faire 
@@ -11,4 +11,14 @@ Mon idée est d'entrainer un modèle de regression logistique sur des données b
 - Trouver un dataSet possédant des features intéressantes
 - Si je ne trouve pas ce dataset, pourquoi pas le construire à partir de données historiques ? 
 
-d
+## Plans
+
+- définition des labels
+- définition des features
+- construction du dataset
+- entrainer la régression logistique
+- évaluer la régression
+
+## Fonctionnement des labels
+
+Les labels sont déterminés à partir du retour futur (une valeur qui nous dit si on a gagné ou perdu)
