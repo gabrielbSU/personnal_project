@@ -11,3 +11,4 @@ Mon idée est d'entrainer un modèle de regression logistique sur des données b
 - Trouver un dataSet possédant des features intéressantes
 - Si je ne trouve pas ce dataset, pourquoi pas le construire à partir de données historiques ? 
 
+d
