@@ -4,11 +4,12 @@ import yfinance as yf #pour télécharger les market datas
 import pandas as pd
 import numpy as np
 from dataset_functions import add_features, create_labels
+import matplotlib.pyplot as plt
 
 df = yf.download("AAPL", start="2010-01-01", end="2024-01-01")
 
 df = add_features(df)          # toutes les features
-df = create_labels(df, h=10)   # labels basés sur le futur
+df = create_labels(df, horizon=10)   # labels basés sur le futur
 
 df = df.dropna()               # nettoyage
 
@@ -22,4 +23,6 @@ X = df[[
 
 y = df["label"]
 
-print(df.head())
+print(df)
+# plt.plot(df["Close"], df["Date"])
+# plt.show()

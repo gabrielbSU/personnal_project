@@ -1,5 +1,6 @@
 """fonctions nécessaires pour créer les features et les labels dans le dataset"""
 
+import numpy as np
 
 def add_features(df):
 
@@ -15,8 +16,9 @@ def add_features(df):
     # Moyennes mobiles
     df["sma_10"] = df["Close"].rolling(10).mean()
     df["sma_20"] = df["Close"].rolling(20).mean()
-    df["close_sma10"] = df["Close"] / df["sma_10"]
-    df["close_sma20"] = df["Close"] / df["sma_20"]
+    close = df["Close"].squeeze() #nécessaire pour ne pas avoir à manipuler un dataframe et une serie en même temps
+    df["close_sma10"] = close / df["sma_10"]
+    df["close_sma20"] = close / df["sma_20"]
 
     # MACD
     ema12 = df["Close"].ewm(span=12, adjust=False).mean()
@@ -44,7 +46,7 @@ def add_features(df):
     df["bb_std"] = df["Close"].rolling(20).std()
     df["bb_high"] = df["bb_mid"] + 2 * df["bb_std"]
     df["bb_low"] = df["bb_mid"] - 2 * df["bb_std"]
-    df["bb_pos"] = (df["Close"] - df["bb_low"]) / (df["bb_high"] - df["bb_low"])
+    df["bb_pos"] = (close - df["bb_low"]) / (df["bb_high"] - df["bb_low"])
 
     # OBV
     df["obv"] = (np.sign(df["Close"].diff()) * df["Volume"]).fillna(0).cumsum()
