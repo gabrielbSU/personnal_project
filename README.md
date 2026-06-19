@@ -14,7 +14,9 @@ Mon idée est d'entrainer un modèle de regression logistique sur des données b
 
 - J'ai construit le dataset, maintenant il faut vérifier si les labels paraissent cohérents en fonction du prix des actions 
 
-- il y a un problème de labelisation quand je backtest. réfléchir à comment est ce qu'on peut labeliser ?
+- il y a un problème de labelisation quand je backtest. réfléchir à comment est ce qu'on peut labeliser ? 
+
+- il s agit de repondre à la question : si je connais le cours d une action à l avance, quand faut il acheter ou vendre ?
 
 ## Plans
 
