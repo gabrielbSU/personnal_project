@@ -14,11 +14,14 @@ Mon idée est d'entrainer un modèle de regression logistique sur des données b
 
 - J'ai construit le dataset, maintenant il faut vérifier si les labels paraissent cohérents en fonction du prix des actions 
 
+- il y a un problème de labelisation quand je backtest
+
 ## Plans
 
 - définition des labels
 - définition des features
 - construction du dataset
+- est ce que la logique des labels établis dans le dataset est bonne ? i.e. est ce qu on gagne en suivant les labels ?
 - entrainer la régression logistique
 - évaluer la régression
 

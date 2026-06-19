@@ -1,0 +1,6 @@
+"""fichier contenant la commande qui permet de tout écraser en local pour récuperer ce qu'il y a sur le repo git"""
+
+git reset --hard HEAD 
+git pull
+
+
